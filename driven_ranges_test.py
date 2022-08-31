@@ -36,6 +36,3 @@ class TestCurrentDrivenRanges(unittest.TestCase):
         self.assertEqual(current_data(1400), 7)
         self.assertEqual(current_data(1600), 8)
         self.assertEqual(current_data(2400), 12)
-
-
-unittest.main()
