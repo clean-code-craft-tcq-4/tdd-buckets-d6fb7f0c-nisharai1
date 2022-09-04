@@ -24,7 +24,7 @@ class TestCurrentDrivenRanges(unittest.TestCase):
 
     def test_check_error(self):
         self.assertNotEqual(identify_error([0, -1, 250, 500, 2000, 4000]), [0, -1, 250, 2000, 500, 4000])
-        self.assertEqual(identify_error([0, -1, 250, 500, 2000, 4000]), [0, -1, 250, 500, 4000])
+        self.assertEqual(identify_error([0, -1, 250, 500, 2000, 4000, 4095]), [0, -1, 250, 500, 4000, 4095])
 
     def test_current_data(self):
         self.assertEqual(current_data(0), 0)
