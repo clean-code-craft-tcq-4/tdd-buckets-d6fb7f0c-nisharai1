@@ -22,12 +22,12 @@ def log_consecutive_groups(current_counts):
 
 
 def identify_error(current_sensor_readings):
-    if 2000 in current_sensor_readings:
+    if 4095 in current_sensor_readings:
         current_sensor_readings.remove(2000)
     return current_sensor_readings
 
 
 def current_data(data):
-    return round((10 * data) / 2000)
+    return round((10 * data) / 4094)
 
 
